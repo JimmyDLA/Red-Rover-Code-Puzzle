@@ -58,3 +58,13 @@ const parseString = (str, isSorted = false) => {
 
   parseDeeper(cleanStr);
 };
+
+
+const inputString = process.argv[2];
+
+if (!inputString) {
+  console.log("Error: Please provide a string in quotes.");
+} else {
+  const shouldSort = process.argv[3] === "true";
+  parseString(inputString, shouldSort);
+}
